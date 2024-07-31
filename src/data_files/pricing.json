@@ -1,0 +1,37 @@
+{
+  "title": "We are non-profitable authoryties",
+  "subTitle": "Service is free for the Victim's.",
+  "badge": "Best value",
+  "thirdOption": "Enterprise Solutions?",
+  "btnText": "Get a Custom Quote",
+
+  "starterKit": {
+    "name": "Investigation",
+    "description": "Best option for court cases",
+    "price": "0",
+    "cents": ".00",
+    "billingFrequency": "USD ",
+    "features": [
+      "Consulting a lawyer",
+      "financial assistance",
+      "Cooperation whith BlockChain"
+    ],
+    "purchaseBtnTitle": "Get the Starter Kit",
+    "purchaseLink": "#"
+  },
+
+  "professionalToolbox": {
+    "name": "Refund Funds from scamers",
+    "description": "Best for large scale uses",
+    "price": "0",
+    "cents": ".00",
+    "billingFrequency": "USD",
+    "features": [
+      "Interpol control system",
+      "Priority support",
+      "Exclusive deals"
+    ],
+    "purchaseBtnTitle": "Get the Professional Service",
+    "purchaseLink": "#"
+  }
+}

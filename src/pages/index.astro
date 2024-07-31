@@ -1,0 +1,145 @@
+---
+// Import the necessary components
+import MainLayout from "@/layouts/MainLayout.astro";
+import HeroSection from "@components/sections/landing/HeroSection.astro";
+import HeroSectionAlt from "@components/sections/landing/HeroSectionAlt.astro";
+import ClientsSection from "@components/sections/landing/ClientsSection.astro";
+import FeaturesGeneral from "@components/sections/features/FeaturesGeneral.astro";
+import FeaturesNavs from "@components/sections/features/FeaturesNavs.astro";
+import TestimonialsSection from "@components/sections/testimonials/TestimonialsSection.astro";
+import PricingSection from "@components/sections/pricing/PricingSection.astro";
+import FAQ from "@components/sections/misc/FAQ.astro";
+import AnnouncementBanner from "@components/ui/banners/AnnouncementBanner.astro";
+import heroImage from "@images/hero-image.avif";
+import faqs from "@data/faqs.json";
+import features from "@data/features.json";
+import pricing from "@data/pricing.json";
+import featureImage from "@images/features-image.avif";
+import construction from "@images/construction-image.avif";
+import tools from "@images/construction-image.avif";
+import dashboard from "@images/dashboard-image.avif";
+
+const avatarSrcs: Array<string> = [
+  "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80",
+  "https://images.unsplash.com/photo-1531927557220-a9e23c1e4794?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80",
+  "https://images.unsplash.com/photo-1541101767792-f9b2b1c4f127?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&&auto=format&fit=facearea&facepad=3&w=300&h=300&q=80",
+  "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80",
+];
+---
+
+<MainLayout>
+  <AnnouncementBanner
+    btnId="dismiss-button"
+    btnTitle="Explore ScrewFast on GitHub"
+    url="https://github.com/mearashadowfax/ScrewFast"
+  />
+
+  <HeroSection
+    title=`Get your money back from a scam <span
+        class="text-yellow-500 dark:text-purple-400">FSCS Assist</span>`
+    subTitle="If you've been scammed, get in touch with our team of experts to help you get your money back."
+    primaryBtn="FREE CONSULTATION"
+    primaryBtnURL="/contact"
+    secondaryBtn="Contact Agent"
+    secondaryBtnURL="/contact"
+    withReview={true}
+    avatars={avatarSrcs}
+    rating=`<span class="font-bold">4.8</span> / 5`
+    starCount={4}
+    reviews=`From Over <span class="font-bold">12.8k</span> Reviews`
+    src={heroImage}
+    alt="Stack of ScrewFast product boxes containing assorted hardware tools"
+  />
+
+  <ClientsSection
+    title="Trusted by Industry Leaders"
+    subTitle="Experience the reliability chosen by industry giants."
+  />
+
+  <FeaturesGeneral
+    title="FSCS assist's services that best fit your requirements."
+    subTitle="We prepare to win. Our experts handle your financial matters with timely, transparent, and thorough strategizing. We proficiently fight scams within the Cryptocurrency, Binary, Forex, and other markets."
+    src={featureImage}
+    alt="ScrewFast products in floating boxes"
+    features={features}
+  />
+
+  <FeaturesNavs
+    title=`How <span class="text-yellow-500 dark:text-yellow-400">FSCS assist</span>'s working.`
+    tabs={[
+      {
+        heading: "Sign up",
+        content:
+          "Performing preliminary checks to assess whether the case can result in a substantial recovery, based on our experience.",
+        svg: "tools",
+        src: tools,
+        alt: "Yellow and black heavy equipment on brown grass field",
+        first: true,
+      },
+      {
+        heading: "Gather the evidence",
+        content:
+          "Collecting all the information and documentation required to successfully pursue your case.",
+        svg: "dashboard",
+        src: dashboard,
+        alt: "A screenshot or graphic representation of the intuitive dashboard",
+        second: true,
+      },
+      {
+        heading: "Get your money back",
+        content:
+          "We take pride in our track record and assure you that we’ll go to great lengths to get your money back.",
+        svg: "house",
+        src: construction,
+        alt: "Gray metal building frame near tower crane during daytime",
+      },
+    ]}
+  />
+
+  <TestimonialsSection
+    title="Money retrieved in 2023"
+    subTitle="Our team of experts secures refunds on a daily basis. We assist businesses as well as individuals in their pursuit of funds lost to scammers. Our goal is to continually improve in our endeavors and we are always here to help you in your fight for what is rightfully yours."
+    ;
+    testimonials={[
+      {
+        content:
+          "ScrewFast dramatically boosted our project efficiency. Setup was instant, and their rapid response times are phenomenal. Truly a game-changer in hardware and construction support!",
+        author: "Samantha Ruiz",
+        role: "Chief Operating Officer | ConstructIt Inc.",
+        avatarSrc:
+          "https://images.unsplash.com/photo-1593104547489-5cfb3839a3b5?q=80&w=1453&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D8&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80",
+      },
+    ]}
+    statistics={[
+      {
+        count: "87%",
+        description:
+          "Fund recovery services",
+      },
+      {
+        count: "56%",
+        description:
+          "Wallet fund tracing",
+      },
+      {
+        count: "92.3%",
+        description:
+          "Due diligence",
+      },
+      {
+        count: "2 Bilion (x)",
+        description: "Totall lost funds",
+      },
+    ]}
+  />
+
+  <PricingSection pricing={pricing} />
+
+  <FAQ title="Frequently<br />asked questions" faqs={faqs} />
+
+  <HeroSectionAlt
+    title="Bitcoin Scam Recovery"
+    subTitle="At Chargeback LTD, we have a team of legal cryptocurrency investigators. The team is excellent at conducting extensive investigations. Our advanced software classifies links between cryptocurrency addresses and entities. It assists in finding similar criminals on the darknet, fiat on and off-ramps, and mixers. We create and document everything on these servers; in the form of intelligence for law enforcement cases. It helps with Bitcoin Recovery. It also assists in cases of ransomware, money laundering, terrorism financing, narcotics trafficking. Our detailed reports prove to be beneficial for the investigation and always lent a hand with judicial proceedings. Our experts will help with the witness in the court; when it’s time to prosecute and recover the assets. Chargeback LTD acts as a network connecting an exceptionally trained team with the investors who’ve lost their bitcoins and other cryptos along the way."
+    url="https://github.com/mearashadowfax/ScrewFast"
+  />
+</MainLayout>
